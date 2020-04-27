@@ -27,7 +27,7 @@ class TicTacToe
     input.to_i - 1 
   end 
   
-  def move(index, token)
+  def move(index, token = "X")
     @board[index] = token 
   end 
   
@@ -112,11 +112,13 @@ class TicTacToe
   
   def play 
     turn until over?
-    if winner
-      puts "Congratulations #{winner}!"
-    else
-      puts "Cat's Game!"
-    end 
+    
+    # if winner
+    #   puts "Congratulations #{winner}!"
+    # else
+    #   puts "Cat's Game!"
+    # end 
+    
   end 
     
 end 
