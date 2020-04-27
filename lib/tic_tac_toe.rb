@@ -112,13 +112,13 @@ class TicTacToe
   
   def play 
     turn until over?
-    winner ? "Congratulations #{winner}!" : "Cat's Game!"
+    # winner ? "Congratulations #{winner}!" : "Cat's Game!"
     # test-expression ? if-true-expression : if-false-expression
-    # if winner
-    #   puts "Congratulations #{winner}!"
-    # else
-    #   puts "Cat's Game!"
-    # end 
+    if winner
+      puts "Congratulations #{winner}!"
+    else
+      puts "Cat's Game!"
+    end 
     
   end 
     
