@@ -47,6 +47,14 @@ class TicTacToe
     end
   end 
   
+    def current_player 
+    if turn_count % 2 == 0 
+      "X"
+    else
+      "O"
+    end
+  end
+  
   def turn 
     puts "PLease enter a position from (1-9)"
     input = gets
@@ -65,13 +73,7 @@ class TicTacToe
     end
   end
   
-  def current_player 
-    if turn_count % 2 == 0 
-      "X"
-    else
-      "O"
-    end
-  end
+
   
   def won?
     WIN_COMBINATIONS.each do |win|
