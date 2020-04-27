@@ -47,7 +47,7 @@ class TicTacToe
     end
   end 
   
-    def current_player 
+  def current_player 
     if turn_count % 2 == 0 
       "X"
     else
@@ -59,8 +59,9 @@ class TicTacToe
     puts "PLease enter a position from (1-9)"
     input = gets
     index = input_to_index(input)
-    if valid_move?(index)
-      move(index, current_player)
+    if valid_move?(index) 
+      token = current_player
+      move(index, token)
       display_board
     else 
       turn
